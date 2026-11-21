@@ -1,0 +1,17 @@
+# Секреты и персональные данные студентов — никогда не коммитим
+.env
+data/
+*.sqlite3
+*.sqlite3-journal
+*.sqlite3-wal
+*.sqlite3-shm
+demo_transcript.txt
+
+# Python
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.idea/
+.vscode/

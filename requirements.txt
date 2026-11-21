@@ -1,0 +1,16 @@
+# Зависимости бота «Дыши свободно»
+# Проверено на Python 3.11.2 (Linux) 22.11.2026.
+#
+# ВАЖНО про версии:
+#  - aiogram 3.33+ на Python 3.11 падает при импорте (TypeError: unhashable type: 'FailFast').
+#    Поэтому диапазон ограничен сверху. На Python 3.12+ ограничение можно снять.
+#  - APScheduler 4.x имеет другой API — код написан под 3.x, поэтому <4.
+
+aiogram>=3.13,<3.29        # тестировалось на 3.20.0.post0 и 3.28.0
+aiosqlite>=0.20,<1.0       # асинхронный доступ к SQLite
+APScheduler>=3.10,<4.0     # ежедневные утренние уведомления
+python-dotenv>=1.0,<2.0    # чтение токена из файла .env
+
+# Нужно ТОЛЬКО для режима webhook (бесплатный хостинг Render / PythonAnywhere):
+aiohttp>=3.9,<4.0          # HTTP-сервер для webhook (Render)
+Flask>=3.0,<4.0            # WSGI-адаптер для PythonAnywhere (файл pa_wsgi.py)
